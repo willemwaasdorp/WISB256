@@ -1,2 +1,3 @@
 naam = raw_input("Name? ")
-print "Hello, " + naam + "!"
+number = raw_input("How many greetings? ")
+print number + " x Hello, " + naam + "!"
