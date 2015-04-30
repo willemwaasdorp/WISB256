@@ -1,8 +1,10 @@
 import math
 import time
+import sys
+n = sys.argv[1]
 def sieve(n):
     t1 = time.perf_counter()
-    prime = open('prime.dat', 'w')
+    prime = open(sys.argv[2], 'w')
     lijst = []
     for i in range(n+1):
         lijst.append(True)
@@ -22,6 +24,6 @@ def sieve(n):
     prime.close()
     print("Found "+ str(result) + " Prime numbers smaller than " + str(n) + " in " + str(t2-t1) +  " sec.") 
     
-sieve(30)            
+sieve(n)            
             
-    
+  
