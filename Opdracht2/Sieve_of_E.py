@@ -16,11 +16,11 @@ def sieve(n):
     for i in range(2,n):
         if lijst[i] == True:
             print(i)
-            prime.write("i \n")
+            prime.write(str(i) + '\n')
             result += 1
     t2 = time.perf_counter()
-    print(result)
-    print(t2-t1)
+    prime.close()
+    print("Found "+ str(result) + " Prime numbers smaller than " + str(n) + " in " + str(t2-t1) +  " sec.") 
     
 sieve(30)            
             
