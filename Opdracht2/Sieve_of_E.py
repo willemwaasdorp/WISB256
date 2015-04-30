@@ -1,7 +1,7 @@
 import math
 import time
 import sys
-n = sys.argv[1]
+n = int(sys.argv[1])
 def sieve(n):
     t1 = time.perf_counter()
     prime = open(sys.argv[2], 'w')
@@ -17,7 +17,7 @@ def sieve(n):
     result = 0
     for i in range(2,n):
         if lijst[i] == True:
-            print(i)
+            
             prime.write(str(i) + '\n')
             result += 1
     t2 = time.perf_counter()
