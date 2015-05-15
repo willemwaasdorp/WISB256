@@ -12,7 +12,7 @@ try:
 except IndexError:
     s = ""
 
-L = int(L)
+L = float(L)
 n = int(n)
 if L > 1:
     print("AssertionError: L should be smaller than 1")
