@@ -6,4 +6,4 @@ for i in range(n):
     if len(woorden) > 4:
         print("Crackers!")
     else:
-        print(zin + " krAh!git ")
+        print(zin + " krAh!")
