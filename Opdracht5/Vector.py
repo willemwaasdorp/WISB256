@@ -1,11 +1,18 @@
+from array import array
 import math
 class Vector:
      
     def __init__(self,n, invoer=0.0):
         self.vector = []
-        for i in range(n):
-            self.vector.append(invoer)
-        self.length = n    
+        if type(invoer) is int or type(invoer) is float:
+            for i in range(n):
+                self.vector.append(invoer)
+            self.length = n 
+        if type(invoer) is list or type(invoer) is array:
+            for i in range(n):
+                self.vector.append(invoer[i])
+            self.length = n
+           
     def __str__(self):
         beeld = ""
         for i in range(self.length):
@@ -22,12 +29,10 @@ class Vector:
             b.vector[i] = self.vector[i] * alpha
         return b    
     def inner(self,other):
-        pass
+        antwoord = 0
+        for i in range(self.length):
+            antwoord += self.vector[i] * other.vector[i]
+        return antwoord    
     def norm(self):
-        pass
-v = Vector(3,2) 
-d = v.scalar(2)
-print(v)
-print(d)
-w = v.lincomb(d,2,2)
-print(w)
+        return math.sqrt(self.inner(self))
+        
