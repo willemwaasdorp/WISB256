@@ -3,7 +3,7 @@ import urllib.request
 
 textfile = open('depth_1.txt','wt')
 
-website = 'http://nu.nl'
+website = 'http://www.stratic-advice.nl'
 domain = 'www.'+ website.replace("http://","")
 x = urllib.request.urlopen(website)
 for i in re.findall('''href=["'](.[^"']+)["']''', str(x.read()), re.I):
